@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+  .header{
+    @apply  absolute w-full h-16
+  }
+
+  .header-container{
+    @apply flex justify-between items-center py-4 px-12 md:max-w-screen-xl md:m-auto
+  }
+
+  .navbar{
+    @apply flex items-center
+  }
+
+  .navbar__list{
+    @apply absolute top-0 h-screen w-screen bg-black left-0 flex flex-col items-start justify-center gap-10 px-10 md:bg-opacity-0 md:flex md:static md:flex-row md:h-auto md:w-auto
+  }
+
+  .navbar__list__item{
+    @apply text-white font-josefinSans text-3xl md:text-base
+  }
+
+  .menu-icon{
+    @apply cursor-pointer md:hidden
+  }
+
+  .close-icon{
+    @apply z-10 cursor-pointer h-6 md:hidden
+  }
+
+  /* HERO */
+  .hero{
+    @apply bg-hero-mobile h-screen w-full flex justify-center items-center bg-cover bg-no-repeat bg-center
+    md:bg-hero-desktop md:justify-start
+  }
+
+  .hero-container{
+    @apply md:w-full md:max-w-screen-xl md:m-auto md:px-6
+  }
+
+  .hero__text{
+    @apply w-11/12 flex justify-center border border-white
+    md:justify-start px-20 md:w-4/5 md:max-w-3xl
+  }
+
+  .hero__title{
+    @apply  text-4xl text-white py-12 w-56
+    md:text-7xl md:w-full font-josefinSans font-light
+  }
+
+  /* Interactive */
+  .interactive{
+    @apply w-full lg:mt-40
+  }
+
+  .interactive-container{
+    @apply flex flex-col items-center justify-center p-7 gap-16 lg:flex-row lg:max-w-7xl lg:m-auto lg:relative
+    lg:justify-start
+  }
+
+  .interactive__img{
+    @apply bg-interactive-mobile h-96 w-full bg-cover bg-center bg-no-repeat lg:bg-interactive-desktop
+    lg:h-128 lg:w-3/4
+  }
+
+  .interactive__info{
+    @apply flex flex-col items-center text-center gap-8
+    lg:text-start lg:absolute lg:right-0 lg:top-64 lg:bg-white lg:w-2/4 lg:p-16 lg:px-10
+  }
+
+  .interactive__info__title{
+    @apply text-3xl w-96 font-josefinSans font-light lg:w-full lg:text-5xl
+  }
+
+  .interactive__info__text{
+    @apply w-3/5 text-dark-gray font-alata lg:w-full
+  }
+
+  /* Creations */
+  .creations{
+    @apply w-full lg:mt-24
+  }
+
+  .creations-container{
+    @apply flex flex-col justify-center items-center p-7 gap-10 lg:max-w-screen-lg lg:m-auto
+  }
+
+  .creations-top{
+    @apply flex justify-center items-center w-full lg:justify-between
+  }
+
+  .creations-top__title{
+    @apply text-3xl font-josefinSans font-light
+  }
+
+  .creations-top__button{
+    @apply hidden lg:flex
+  }
+
+  .creations-btn{
+    @apply border py-3 px-10 font-alata tracking-widest
+  }
+
+  .creations-cards-container{
+    @apply flex flex-wrap w-full items-center justify-center gap-10
+  }
+
+  .creations-card{
+    @apply w-96 h-40 flex flex-col justify-end p-7 text-2xl text-white bg-black bg-cover lg:h-96 lg:w-52 font-josefinSans font-light
+  }
+
+  .creations-card:nth-child(1){
+    @apply bg-deep-mobile lg:bg-deep-desktop
+  }
+
+  .creations-card:nth-child(2){
+    @apply bg-night-mobile lg:bg-night-desktop
+  }
+
+  .creations-card:nth-child(3){
+    @apply bg-soccer-mobile lg:bg-soccer-desktop
+  }
+
+  .creations-card:nth-child(4){
+    @apply bg-grid-mobile lg:bg-grid-desktop
+  }
+
+  .creations-card:nth-child(5){
+    @apply bg-above-mobile lg:bg-above-desktop
+  }
+
+  .creations-card:nth-child(6){
+    @apply bg-borealis-mobile lg:bg-borealis-desktop
+  }
+
+  .creations-card:nth-child(7){
+    @apply bg-curiosity-mobile lg:bg-curiosity-desktop
+  }
+
+  .creations-card:nth-child(8){
+    @apply bg-fisheye-mobile lg:bg-fisheye-desktop
+  }
+
+  .creations-bottom{
+    @apply lg:hidden
+  }
+
+  /* footer */
+  .footer{
+    @apply bg-black text-white
+  }
+
+  .footer-container{
+    @apply lg:max-w-screen-lg lg:m-auto flex flex-col justify-center items-center p-7 gap-10
+    lg:flex-row lg:justify-between px-16
+  }
+
+  .footer-top{
+    @apply flex flex-col gap-5 lg:items-start
+  }
+
+  .footer-top__list{
+    @apply flex flex-col items-center gap-5 font-alata
+    lg:flex-row
+  }
+
+  .footer-bottom{
+    @apply flex flex-col gap-3 lg:items-end lg:gap-5 
+  }
+
+  .footer-icons{
+    @apply flex justify-center items-center gap-4
+  }
+
+  .footer-text{
+    @apply text-dark-gray font-josefinSans
+  }
+}
+
+@media (max-width: 768px) {
+  .hide{
+    display: none;
+  }  
+}
