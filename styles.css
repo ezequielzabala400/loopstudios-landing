@@ -19,11 +19,12 @@
   }
 
   .navbar__list{
-    @apply absolute top-0 h-screen w-screen bg-black left-0 flex flex-col items-start justify-center gap-10 px-10 md:bg-opacity-0 md:flex md:static md:flex-row md:h-auto md:w-auto
+    @apply absolute top-0 h-screen w-screen bg-black left-0 flex-col items-start justify-center gap-10 px-10 md:bg-opacity-0 md:flex md:static md:flex-row md:h-auto md:w-auto
   }
 
   .navbar__list__item{
-    @apply text-white font-josefinSans text-3xl md:text-base
+    @apply text-white font-josefinSans text-3xl md:text-base relative md:hover:after:absolute md:hover:after:left-0 
+    md:hover:after:bottom-0 md:hover:after:h-0.5 md:hover:after:w-full md:hover:after:bg-white 
   }
 
   .menu-icon{
@@ -105,6 +106,8 @@
 
   .creations-btn{
     @apply border py-3 px-10 font-alata tracking-widest
+    hover:bg-black hover:text-white hover:transition-all
+    hover:duration-200
   }
 
   .creations-cards-container{
@@ -112,7 +115,15 @@
   }
 
   .creations-card{
-    @apply w-96 h-40 flex flex-col justify-end p-7 text-2xl text-white bg-black bg-cover lg:h-96 lg:w-52 font-josefinSans font-light
+    @apply w-96 h-40 flex flex-col justify-end p-7 text-2xl bg-cover text-white lg:h-96 lg:w-52 font-josefinSans font-light relative cursor-pointer
+  }
+
+  .creations-card:hover .overlay-card{
+    @apply absolute left-0 bottom-0 w-full h-full bg-dark-gray brightness-150 opacity-60
+  }
+
+  .creations-card:hover > span{
+    @apply z-10 text-black
   }
 
   .creations-card:nth-child(1){
@@ -170,12 +181,22 @@
     lg:flex-row
   }
 
+  .footer-top__list__item{
+    @apply relative md:hover:after:absolute md:hover:after:left-0 
+    md:hover:after:bottom-0 md:hover:after:h-0.5 md:hover:after:w-full md:hover:after:bg-white 
+  }
+
   .footer-bottom{
     @apply flex flex-col gap-3 lg:items-end lg:gap-5 
   }
 
   .footer-icons{
-    @apply flex justify-center items-center gap-4
+    @apply flex justify-center items-center gap-4 
+  }
+
+  .footer-icons__item{
+    @apply relative md:hover:after:absolute md:hover:after:left-0 
+    md:hover:after:-bottom-2 md:hover:after:h-0.5 md:hover:after:w-full md:hover:after:bg-white 
   }
 
   .footer-text{
@@ -186,5 +207,8 @@
 @media (max-width: 768px) {
   .hide{
     display: none;
+  }
+  .show{
+    display: flex;
   }  
 }
